@@ -1,0 +1,25 @@
+:local(.dialog){
+    width: 600px;
+    height: 50px;
+    background-color: #13bfad;
+    border: 2px solid rgb(62, 177, 96)4;
+    color: white;
+    border-radius: 5px;
+    top: -50vh;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 100;
+    font-size: 20px;
+    font-family: arial; 
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+:local(.dialogBox){
+    position: fixed;
+    z-index: 100000;
+    top: 30vh;
+    left: 0;
+    width: 100vw;
+}
