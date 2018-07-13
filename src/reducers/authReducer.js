@@ -7,7 +7,9 @@ import {
   REGISTER_USER_FAIL,
   GET_USER_PROFILE_SUCCESS,
   GET_USER_PROFILE_FAIL,
-  UPDATE_USER_PROFILE_SUCCESS
+  UPDATE_USER_PROFILE_SUCCESS,
+  PASSWORD_RESET_FAIL,
+  PASSWORD_RESET_SUCCESS
 } from '../constant/actionsType'
 
 const initialState = {
@@ -73,6 +75,15 @@ export default (state = initialState, { payload, type }) => {
       return {
         ...state,
         success: !state.success
+      }
+    case PASSWORD_RESET_FAIL:
+      return {
+        ...state,
+        error: payload
+      }
+    case PASSWORD_RESET_SUCCESS:
+      return {
+        ...state,
       }
     default:
       return state

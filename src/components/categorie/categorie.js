@@ -9,7 +9,7 @@ class Categorie extends Component {
   }
 
   render () {
-    const { categorie, isFetching, error } = this.props
+    const { products, isFetching, error } = this.props
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
@@ -27,8 +27,8 @@ class Categorie extends Component {
                 <div className='loading' />
               </div>
               : <Products
-                products={categorie.product_set}
-                productsCount={categorie.product_set.length}
+                products={products}
+                productsCount={products.length}
                 location={this.props.location} />
           }
         </div>

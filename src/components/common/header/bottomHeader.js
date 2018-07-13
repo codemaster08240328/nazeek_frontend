@@ -50,7 +50,7 @@ class BottomHeader extends Component {
                         {
                           searchByLists.brands && 
                           searchByLists.brands.map((item, index)=>{
-                            return(<li key={index}><Link to='/products' onClick={() => this.props.getSearchByProducts('rooms', item.id)}>{item.title}</Link></li>)
+                            return(<li key={index}><Link to='/products' onClick={() => this.props.getSearchByProducts('brands', item.id)}>{item.title}</Link></li>)
                           })
                         }
                       </ul>
@@ -64,7 +64,7 @@ class BottomHeader extends Component {
                         {
                           searchByLists.styles && 
                           searchByLists.styles.map((item, index)=>{
-                            return(<li key={index}><Link to='/products' onClick={() => this.props.getSearchByProducts('rooms', item.id)}>{item.title}</Link></li>)
+                            return(<li key={index}><Link to='/products' onClick={() => this.props.getSearchByProducts('styles', item.id)}>{item.title}</Link></li>)
                           })
                         }
                       </ul>
@@ -78,7 +78,7 @@ class BottomHeader extends Component {
                         {
                           searchByLists.occasions && 
                           searchByLists.occasions.map((item, index)=>{
-                            return(<li key={index}><Link to='/products' onClick={() => this.props.getSearchByProducts('rooms', item.id)}>{item.title}</Link></li>)
+                            return(<li key={index}><Link to='/products' onClick={() => this.props.getSearchByProducts('occasions', item.id)}>{item.title}</Link></li>)
                           })
                         }
                       </ul>

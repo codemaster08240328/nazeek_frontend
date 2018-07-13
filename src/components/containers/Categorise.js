@@ -2,11 +2,11 @@ import Categorie from '../categorie/categorie'
 import { connect } from 'react-redux'
 import { fetchCategotie } from '../../actions/fetchCatigorieActions'
 
-const mapStateToProps = ({categorie}) => {
-  const {categorie: Categorie, isFetching, error} = categorie
+const mapStateToProps = ({products}) => {
+  const {products: Products, isFetching, error} = products
 
   return {
-    categorie: Categorie,
+    products: Products,
     isFetching,
     error
   }

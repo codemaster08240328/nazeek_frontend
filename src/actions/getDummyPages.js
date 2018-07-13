@@ -6,7 +6,7 @@ import {
 } from '../constant/actionsType'
 
 export const getDummyPages = () => (dispatch) => {
-  axios.get('http://192.168.0.101:8080/api/dummy/', {})
+  axios.get('http://178.128.15.1//api/dummy/', {})
     .then((result) => {
       dispatch({
         type: FETCH_DUMMY_PAGES_SUCCESS,

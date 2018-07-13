@@ -5,6 +5,7 @@ import {
   FETCH_CATEGORIE_FAIL
 } from '../constant/actionsType'
 import { ShopUrls } from '../constant/urls'
+import { fetchProductsSuccess } from './fetchProductsActions'
 
 const fetchCategotieStart = () => {
   return {
@@ -35,7 +36,8 @@ export const fetchCategotie = (id) => (dispatch) => {
         throw new Error('Error!')
       }
 
-      dispatch(fetchCategotieSuccess(result.data))
+      dispatch(fetchCategotieSuccess(result.data));
+      dispatch(fetchProductsSuccess(result.data.product_set))
     })
     .catch((err) => dispatch(fetchCategotieFail(err)))
 }

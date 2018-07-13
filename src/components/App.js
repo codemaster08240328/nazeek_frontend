@@ -11,8 +11,11 @@ import Profile from './containers/userProfile'
 import Product from './containers/Product'
 import Products from './containers/Products'
 import Categorise from './containers/Categorise'
+import ResetPass from './containers/ResetPass'
 import RegisterationDone from './auth/signUpDone'
+import resetStart from './auth/resetStart'
 import ActivateAccont from './containers/ActivateAccont'
+import ResetPassConfirm from './containers/ResetPassConfirm'
 import Cart from './containers/Cart'
 import CheckOut from './checkout'
 import DummyPage from './containers/DummyPages'
@@ -43,8 +46,11 @@ class App extends Component {
           <Route path='/products/:id' component={Product} />
           <Route path='/categories/:id' component={Categorise} />
           <Route path='/registeration-done' component={RegisterationDone} />
+          <Route path='/reset-password-confirm' component={resetStart} />
           <Route path='/account/confirm-email/:key' component={ActivateAccont} />
+          <Route path='/account/confirm-reset/:key' component={ResetPassConfirm} />
           <Route path='/static/:name' component={DummyPage} />
+          <Route path='/reset' component={ResetPass} />
           <Redirect to='/' />
         </Switch>
         <Footer />

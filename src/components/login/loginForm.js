@@ -30,7 +30,7 @@ const LoginForm = (props) => {
       </div>
       <div className='form-check row'>
         <div className='col-sm-offset-4 col-sm-7'>
-          <a href='#' className='forget-pass'><i className='icon-question icons' />Forget Password ?</a>
+          <a href='#' className='forget-pass'><i className='icon-question icons' /><Link to='/reset'>Forgot Password?</Link></a>
         </div>
         <div className='col-sm-offset-4 col-sm-7'>
           <div className='ui_checkbox'>

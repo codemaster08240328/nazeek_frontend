@@ -54,7 +54,7 @@ export const socialLoginUser = (data, socailType) => (dispatch) => {
 }
 
 export const logoutUser = () => (dispatch) => {
-  localStorage.removeItem('token');
+  localStorage.clear()
   dispatch({
     type: LOGOUT_USER
   })

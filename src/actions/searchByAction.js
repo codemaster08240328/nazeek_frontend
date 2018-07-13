@@ -50,7 +50,7 @@ export const getSearchByLists = () => (dispatch) => {
 }
 
 export const getSearchByProducts = (searchItem, itemId) => (dispatch) => {
-  dispatch(fetchProductsStart());
+  // dispatch(fetchProductsStart());
   const body = new FormData();
   body.append('search_item', searchItem);
   body.append('item_id', itemId);
