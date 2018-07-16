@@ -10,7 +10,9 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
+.row{
+    display: flex
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -663,6 +665,10 @@ li.offers-m > a > span{
     padding: 50px 0 10px;
 }
 
+.top-footer{
+    display: flex;
+}
+
 .f-box{
     margin-bottom: 30px;
 }
@@ -698,6 +704,11 @@ li.offers-m > a > span{
 
 .section-subscribe{
     padding: 30px 0;
+}
+
+.section-subscribe .row{
+    display: flex;
+    justify-content: space-between;
 }
 
 .scribe-txt > img{
@@ -958,15 +969,15 @@ li.offers-m > a > span{
 
 .label-xs:before{
     bottom: -10px;
-    right: 5px;
+    left: 5px;
     border: solid transparent;
     content: " ";
     height: 0;
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-right-color: transparent;
-    border-left-color: #607d8a;
+    border-left-color: transparent;
+    border-right-color: #607d8a;
     border-top-color: transparent;
     border-bottom-color: transparent;
     border-top-width: 4px;
@@ -1046,6 +1057,11 @@ li.offers-m > a > span{
     padding-right: 60px;
 }
 
+.padd-l-r .owl-stage{
+    left: 105%
+}
+
+
 .f-left{
     float: right;
 }
@@ -1071,6 +1087,10 @@ li.offers-m > a > span{
 
 .section-new-arrivals{
     padding: 50px 0;
+}
+
+.section-new-arrivals .row{
+    display: flex
 }
 
 .product-item{
@@ -1284,9 +1304,7 @@ li.offers-m > a > span{
     margin-bottom: 30px;
 }
 
-.owl-stage-outer {
-    direction: ltr;
-}
+
 
 #offers-slider .owl-nav > button{
     color: #333333;
@@ -1533,6 +1551,10 @@ ul li:hover >.submenu{
 
 .section-home-slider{
     position: relative;
+}
+
+.section-home-slider .owl-stage-outer .owl-stage{
+    left: 400%
 }
 
 .scroll-button{
@@ -3897,7 +3919,7 @@ a.pagination-next i,a.pagination-prev i{
 }
 
 .slick-prev{
-    right: 1px;
+    left: 0px;
     top: -22px;
 }
 
@@ -4658,7 +4680,7 @@ a.pagination-next i,a.pagination-prev i{
 .Thumb-main{
     position: absolute;
     top: 50%;
-    right: 50%;
+    right: -50%;
     transform: translate(-50% , -50%);
 }
 

@@ -614,6 +614,11 @@ li.offers-m > a > span{
 .section-subscribe{
   padding: 30px 0;
 }
+.section-subscribe .row{
+  display: flex;
+  justify-content: space-between;
+}
+
 .scribe-txt > img{
   display: inline-block;
   vertical-align: middle;

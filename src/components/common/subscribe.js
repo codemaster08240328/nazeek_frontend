@@ -35,7 +35,7 @@ class Subscribe extends React.Component {
                 <p>{lang=='ar'?'اشترك للحصول على قائمة':'Subscribe For Mailing List'}</p>
               </div>
             </div>
-            <div className='col-md-offset-2 col-md-5 col-sm-6'>
+            <div className=' col-md-5 col-sm-6'>
               <form className='scribe-form' onSubmit={this.handleSend}>
                 <input  name='email' type='email' value={this.state.email} onChange={this.handleChange} className='form-control' placeholder={lang=='ar'?'أدخل ايميلك':'Enter Your Mail'} required/>
                 <button type='submit' className='btn btn-scribe'><i className='icon-paper-plane icons' /></button>

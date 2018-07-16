@@ -52,7 +52,7 @@ const TopHeader = ({ authenticated, logoutUser, user }) => {
 
           <li>
             
-            <a href='index.html' onClick={handleLang}><i className='icon-globe icons' />{lang=='ar'?'English':'Logout'}</a>
+            <a href='index.html' onClick={handleLang}><i className='icon-globe icons' />{lang=='ar'?'English':'Arabic'}</a>
           </li>
           </div>
           <div className='header-username'>
