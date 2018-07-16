@@ -17,6 +17,7 @@ body{
     background-color: #fff;
     font-size:12px;
     font-weight:400;
+    direction: ltr;
 }
 ul{
     padding: 0;

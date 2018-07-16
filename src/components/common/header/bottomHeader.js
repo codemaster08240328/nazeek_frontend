@@ -10,12 +10,13 @@ class BottomHeader extends Component {
 
   render () {
     const { categories, isFetching, searchByLists, isSearchBy } = this.props
+    const lang = localStorage.getItem('lang');
     return (
       <div className='header-bottom'>
         <div className='container'>
 
           <div className='hb-right clearfix'>
-            <a href='javascript:void(0);' className='btn-design'>design your room</a>
+            <a href='javascript:void(0);' className='btn-design'>{lang === 'ar'?'صمم غرفتك': 'design your room'}</a>
             <a href='#menu' className='hamburger is-closed'>
               <span className='hamb-top' />
               <span className='hamb-middle' />
@@ -26,7 +27,7 @@ class BottomHeader extends Component {
           <div className='hb-left clearfix'>
             <ul className='menu-st search-by clearfix'>
               <li className='dropdown'>
-                <a href='product-page.html' data-toggle='dropdown'><i className='icon-magnifier icons' aria-hidden='true' /> search by<span className='m-arrow'><i className='icon-arrow-down icons' /></span></a>
+                <a href='product-page.html' data-toggle='dropdown'><i className='icon-magnifier icons' aria-hidden='true' /> {lang === 'ar'?'خيارات البحث': 'search by'}<span className='m-arrow'><i className='icon-arrow-down icons' /></span></a>
                 <ul className='dropdown-menu multi-level' role='menu' aria-labelledby='dropdownMenu'>
                   <li className='dropdown-submenu'>
                     <a tabIndex='-1' href='product-page.html'>rooms</a>

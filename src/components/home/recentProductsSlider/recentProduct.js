@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const RecentProduct = ({product}) => {
+  const lang = localStorage.getItem('lang')
   return (
     <div className='recent-item clearfix'>
       <Link to={`/products/${product.id}`} className='recThumb'>
@@ -19,8 +20,8 @@ const RecentProduct = ({product}) => {
         <div className='star-rating'>
           <span style={{ width: '60%' }}><strong className='rating'>3</strong> out of 5</span>
         </div>
-        <a href='#' className='addCart'>Add To Cart</a>
-        <div className='label-xs'>offers</div>
+        <a href='#' className='addCart'>{lang=='ar'?'أضف الى السلة':'Add To Cart'}</a>
+        <div className='label-xs'>{lang=='ar'?'العروض':'offers'}</div>
       </div>
       <a href='#' className='favorite-pro-btn'><i className='icon-heart icons' /></a>
     </div>

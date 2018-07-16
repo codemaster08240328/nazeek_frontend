@@ -71,6 +71,7 @@ class Product extends Component {
     const shareUrl = 'google.com'
     const title = "title"
     const body = 'body'
+    const lang = localStorage.getItem('lang')
 
     return (
       <React.Fragment>
@@ -190,7 +191,7 @@ class Product extends Component {
                             </div>
                           </div>
                           <div className='pdp--action clearfix'>
-                            <a href='javascript:void(0);' onClick={() => this.getItemsOfCart(product.variation_set[this.state.variationSetId].id, this.state.quantity)} className='addCart'>Add To Cart</a>
+                            <a href='javascript:void(0);' onClick={() => this.getItemsOfCart(product.variation_set[this.state.variationSetId].id, this.state.quantity)} className='addCart'>{lang=='ar'?'أضف الى السلة':'Add To Cart'}</a>
                             <a href='javascript:void(0);' onClick={() => this.props.addToWishList(product.variation_set[this.state.variationSetId])} className='favorite-pro-btn'><i className='icon-heart icons' /></a>
                           </div>
                         </div>

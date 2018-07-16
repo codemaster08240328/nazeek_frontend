@@ -7,33 +7,34 @@ class Cart extends Component {
 
   render () {  
     const { getItemsOfCart, addToWishList, deleteCartItem } = this.props;
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><a href='index.html'><i className='icon-home icons' /></a></li>
-              <li className='breadcrumb-item active'>cart</li>
+              <li className='breadcrumb-item active'>{lang=='ar'?'سلة التسوق':'cart'}</li>
             </ol>
           </div>
         </div>
         <div className='content-innerPage'>
           <div className='container'>
             <div className='sec-head clearfix'>
-              <h2 className='sec-title f-left'>Shoping cart</h2>
+              <h2 className='sec-title f-left'>{lang=='ar'?'سلة التسوق':'Shopping cart'}</h2>
               <div className='col--right'>
-                <a href='#' className='btn-primary-cus'>Continue Shopping <i className='glyphicon glyphicon-share-alt' /></a>
+                <a href='#' className='btn-primary-cus'>{lang=='ar'?'تابع التسوق':'Continue Shopping'} <i className='glyphicon glyphicon-share-alt' /></a>
               </div>
             </div>
             <div className='table-responsive'>
               <table className='table table-cart table-st1 table-striped'>
                 <thead>
                   <tr>
-                    <th className='width-35'>Product</th>
-                    <th>Product ID</th>
-                    <th>Quantitiy</th>
-                    <th>Item Price (KD)</th>
-                    <th>Subtotal (KD)</th>
+                    <th className='width-35'>{lang=='ar'?'المنتج':'Product'}</th>
+                    <th>{lang=='ar'?'رقم المنتج':'Product ID'}</th>
+                    <th>{lang=='ar'?'الكمية':'Quantitiy'}</th>
+                    <th>{lang=='ar'?'(سعر المنتج (د.ك':'Item Price'}</th>
+                    <th>{lang=='ar'?'(المجموع الفرعي (د.ك':'Subtotal'}</th>
                     <th />
                     <th />
                     <th />
@@ -54,19 +55,19 @@ class Cart extends Component {
             </div>
             <div className='clearfix'>
               <div className='ch-b-left'>
-                <p className='cc-note'>By countinu to checkout you accept of term of use and privecy policy </p>
+                <p className='cc-note'>{lang=='ar'?'من خلال الاستمرار في الخروج ، فإنك توافق على شروط الاستخدام وسياسة الخصوصية':'By countinu to checkout you accept of term of use and privecy policy'} </p>
               </div>
               <div className='ch-b-right'>
-                <div className='without-div'><i className='icon-doc icons' /><p>TOTAL (<span>without delivry fees</span>)  : {this.props.cartProducts.subtotal} KD</p></div>
+                <div className='without-div'><i className='icon-doc icons' /><p>{lang=='ar'?'(مجموع (بدون رسوم التوصيل':'TOTAL (without delivry fees)'} : {this.props.cartProducts.subtotal} KD</p></div>
                 <div className='cart-action clearfix'>
-                  <a href='index.html' className='btn-primary-cus'>Continue Shopping <i className='glyphicon glyphicon-share-alt' /></a>
-                  <Link to='/checkout' className='btn-primary-cus primary-cus-active'>Checkout</Link>
+                  <a href='index.html' className='btn-primary-cus'>{lang=='ar'?'تابع التسوق':'Continue Shopping'} <i className='glyphicon glyphicon-share-alt' /></a>
+                  <Link to='/checkout' className='btn-primary-cus primary-cus-active'>{lang=='ar'?'الدفع':'Checkout'}</Link>
                 </div>
               </div>
             </div>
             <div className='box-like-product'>
               <div className='sec-head clearfix'>
-                <h2 className='sec-title'>may be you like this</h2>
+                <h2 className='sec-title'>{lang=='ar'?'منتجاتك قد تناسب خياراتك':'may be you like this'}</h2>
               </div>
               <OwlCarousel
                 className='owl-carousel style-owl like-carousel'

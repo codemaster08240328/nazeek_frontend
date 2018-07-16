@@ -1,6 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 const TopHeader = ({ authenticated, logoutUser, user }) => {
+
+  const handleLang = ()=>{
+    if(localStorage.getItem('lang') === 'ar'){
+      localStorage.setItem('lang', 'en');
+    }else{
+      localStorage.setItem('lang', 'ar')
+    }
+  }
+
+  const lang = localStorage.getItem('lang')
+
   return (
     <div className='header-top'>
       <div className='container'>
@@ -16,35 +27,36 @@ const TopHeader = ({ authenticated, logoutUser, user }) => {
               ? <React.Fragment>
                 <li>
                   <Link to='/' onClick={logoutUser}>
-                    <i className='icon-user-follow icons' />Logout
+                    <i className='icon-user-follow icons' />{lang=='ar'?'تسجيل الخروج':'Logout'}
                   </Link>
                 </li>
                 <li>
                   <Link to='/profile'>
-                    <i className='icon-user-follow icons' />Profile
+                    <i className='icon-user-follow icons' />{lang=='ar'?'الصفحة الشخصية':'Profile'}
                   </Link>
                 </li>
               </React.Fragment>
               : <React.Fragment>
                 <li>
                   <Link to='/register'>
-                    <i className='icon-user-follow icons' />Register
+                    <i className='icon-user-follow icons' />{lang=='ar'?'تسجيل':'Register'}
                   </Link>
                 </li>
                 <li>
                   <Link to='/login'>
-                    <i className='icon-login icons' />Sigin
+                    <i className='icon-login icons' />{lang=='ar'?'تسجيل الدخول':'Signin'}
                   </Link>
                 </li>
               </React.Fragment>
           }
 
           <li>
-            <a href='index_ar.html'><i className='icon-globe icons' />Arabic</a>
+            
+            <a href='index.html' onClick={handleLang}><i className='icon-globe icons' />{lang=='ar'?'English':'Logout'}</a>
           </li>
           </div>
           <div className='header-username'>
-            {user.username && <span>Welcome {user.username}</span>}
+            {user.username && <span>{lang=='ar'?'مرحباَ':'Welcome'} {user.username}</span>}
           </div>
         </ul>
         

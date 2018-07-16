@@ -27,11 +27,12 @@ class AddressBook extends Component {
 
   render () {
     const {addresses, isFetching, error} = this.props
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='col-lg-9 col-md-8 col-sm-12'>
           <div className='sec-head marg-b0 clearfix'>
-            <h2 className='sec-title f-left'>Address book</h2>
+            <h2 className='sec-title f-left'>{lang == 'ar'?'العنوان الشخصي':'Address book'}</h2>
           </div>
           <div className='sec-warpper'>
             <div className='table-address'>

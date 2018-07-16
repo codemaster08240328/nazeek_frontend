@@ -27,6 +27,15 @@ import 'slick-carousel/slick/slick-theme.css'
 import 'redux-notifications/lib/styles.css'
 
 class App extends Component {
+
+  componentDidMount(){
+    if(localStorage.getItem('lang') === 'ar'){
+      require ('./../styles/index_ar.css')
+    }else{
+      require ('./../styles/index.css')
+    }
+  }
+
   render () {
     return (
       <div className='main-wrapper'>

@@ -25,14 +25,14 @@ class Profile extends Component {
   render () {
     const { view } = this.state
     const { user, logout } = this.props
-
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-              <li className='breadcrumb-item active'>Profile</li>
+              <li className='breadcrumb-item active'>{lang=='ar'?'الصفحة الشخصية':'Profile'}</li>
             </ol>
           </div>
         </div>
@@ -45,7 +45,7 @@ class Profile extends Component {
                     <img src={avatar} alt='' className='avatar-img' />
                     <div className='prof-txt'>
                       <h2>{user.username}</h2>
-                      <a onClick={logout} className='logout-link'>Logout</a>
+                      <a onClick={logout} className='logout-link'>{lang=='ar'?'مرحباَ':'Welcome'}</a>
                     </div>
                   </div>
                   <div className='bps-body'>
@@ -54,19 +54,19 @@ class Profile extends Component {
                         <a><span><i className='icon-grid icons' /></span>Account Home</a>
                       </li>
                       <li className={view === 'presonal-info' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('presonal-info')}>
-                        <a ><span><i className='icon-user icons' /></span>Personal Information</a>
+                        <a ><span><i className='icon-user icons' /></span>{lang=='ar'?'المعلومات الشخصية':'Personal Information'}</a>
                       </li>
                       <li className={view === 'order-history' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('order-history')}>
-                        <a ><span><i className='icon-doc icons' /></span>Order History</a>
+                        <a ><span><i className='icon-doc icons' /></span>{lang=='ar'?'تاريخ الطلب':'Order History'}</a>
                       </li>
                       <li className={view === 'address-book' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('address-book')}>
-                        <a ><span><i className='icon-notebook icons' /></span>Address book</a>
+                        <a ><span><i className='icon-notebook icons' /></span>{lang == 'ar'?'العنوان الشخصي':'Address book'}</a>
                       </li>
                       <li className={view === 'payment' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('payment')}>
-                        <a ><span><i className='icon-credit-card icons' /></span>Way of Payments</a>
+                        <a ><span><i className='icon-credit-card icons' /></span>{lang == 'ar'?'طريقة الدفع':'Way of Payment'}</a>
                       </li>
                       <li className={view === 'wishlist' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('wishlist')}>
-                        <a ><span><i className='icon-heart icons' /></span>Wishlist</a>
+                        <a ><span><i className='icon-heart icons' /></span>{lang=='ar'?'قائمة المفضلات':'Wishlist'}</a>
                       </li>
                     </ul>
                   </div>

@@ -21,11 +21,12 @@ class Payment extends Component {
   }
 
   render () {
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='col-lg-9 col-md-8 col-sm-12'>
           <div className='sec-head marg-b0 clearfix'>
-            <h2 className='sec-title f-left'>Way of Payments</h2>
+            <h2 className='sec-title f-left'>{lang == 'ar'?'طريقة الدفع':'Way of Payment'}</h2>
           </div>
           <div className='sec-warpper'>
             <div className='table-address'>

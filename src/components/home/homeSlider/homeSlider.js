@@ -1,5 +1,7 @@
 import React from 'react'
 import OwlCarousel from 'react-owl-carousel'
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import HomeSliderItem from './homeSliderItem'
 
 const HomeSlider = () => {
@@ -8,7 +10,7 @@ const HomeSlider = () => {
       <OwlCarousel
         id='homeSlider'
         className='owl-carousel owl-theme style-owl'
-        loop
+        loop={true}
         autoplay
         autoplaySpeed={2000}
         margin={0}

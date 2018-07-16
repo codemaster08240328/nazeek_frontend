@@ -6,8 +6,7 @@ import store from './store'
 import history from './utils/historyUtils'
 import App from './components/App'
 import Modal from 'react-modal';
-import './styles/index.css'
-import registerServiceWorker from './registerServiceWorker'
+
 
 Modal.setAppElement(document.getElementById('root'));
 ReactDOM.render(
@@ -17,4 +16,3 @@ ReactDOM.render(
     </Router>
   </Provider>
   , document.getElementById('root'))
-registerServiceWorker()

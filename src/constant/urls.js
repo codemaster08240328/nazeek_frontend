@@ -1,6 +1,6 @@
 // const ROOT_URL = 'http://209.97.132.19:8000/'// 18.197.50.198
 // const ROOT_URL = 'http://206.189.177.94:8000/'// live server...
-const ROOT_URL = 'http://178.128.15.1/'
+const ROOT_URL = 'http://192.168.0.101:8080/'
 export const AuthUrls = {
   LOGIN: `${ROOT_URL}rest-auth/login/`,
   SOCIAL_LOGIN: `${ROOT_URL}rest-auth/social/`,

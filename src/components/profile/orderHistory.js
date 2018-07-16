@@ -7,10 +7,11 @@ class OrderHistory extends React.Component {
     this.props.getOrderList()
   }
   render(){
+    const lang = localStorage.getItem('lang')
     return (
       <div className='col-lg-9 col-md-8 col-sm-12'>
         <div className='sec-head marg-b0 clearfix'>
-          <h2 className='sec-title f-left'>Order History</h2>
+          <h2 className='sec-title f-left'>{lang=='ar'?'تاريخ الطلب':'Order History'}</h2>
         </div>
         <div className='sec-warpper'>
           <div className='order-history-list'>

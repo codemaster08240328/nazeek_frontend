@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const OffersSliderItem = ({ product }) => {
+  const lang = localStorage.getItem('lang')
+
   return (
     <div className='item'>
       <div className='offer-item'>
@@ -23,7 +25,7 @@ const OffersSliderItem = ({ product }) => {
           </Link>
           <a href='#' className='favorite-pro-btn'><i className='icon-heart icons' /></a>
           <div className='add-div'>
-            <a href='#' className='addCart'>Add To Cart</a>
+            <a href='#' className='addCart'>{lang=='ar'?'أضف الى السلة':'Add To Cart'}</a>
           </div>
         </div>
       </div>

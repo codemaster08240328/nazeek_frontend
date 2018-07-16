@@ -46,10 +46,11 @@ class PersonalInfo extends React.Component{
   }
 
   render(){
+    const lang = localStorage.getItem('lang')
     return (
       <div className='col-lg-9 col-md-8 col-sm-7'>
         <div className='sec-head clearfix'>
-          <h2 className='sec-title f-left'>Personal Information</h2>
+          <h2 className='sec-title f-left'>{lang=='ar'?'المعلومات الشخصية':'Personal Information'}</h2>
         </div>
         <div className='sec-warpper'>
           <div className='row'>

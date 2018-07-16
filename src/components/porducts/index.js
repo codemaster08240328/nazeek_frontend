@@ -76,7 +76,7 @@ class Products extends Component {
   render () {
     const {productsCount, isFetching} = this.props
     const {pathname} = this.props.location
-
+    const lang = localStorage.getItem('lang')
     return (
       isFetching
         ? <div id='preloader'>
@@ -89,7 +89,7 @@ class Products extends Component {
               <div className='container'>
                 <ol className='breadcrumb'>
                   <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-                  <li className='breadcrumb-item'><a href='product-page.html'>Products</a></li>
+                  <li className='breadcrumb-item'><a href='product-page.html'>{lang=='ar'?'المنتج':'Products'}</a></li>
                 </ol>
               </div>
             </div>
@@ -101,22 +101,22 @@ class Products extends Component {
               </div>
               <div className='col-lg-9 col-md-8'>
                 <div className='sec-head marg-b0 col-left-right clearfix'>
-                  <h2 className='sec-title f-left'>Search Results</h2>
+                  <h2 className='sec-title f-left'>{lang=='ar'?'نتائج البحث':'Search Results'}</h2>
                   <div className='col--right clearfix'>
                     <div className='filter-sortrg'>
                       <i className='zmdi zmdi-unfold-more' />
                       <select className='form-control sort-s' onChange={this.setSort}>
-                        <option value='order'>Orders</option>
-                        <option value='price-low'>Price low</option>
-                        <option value='price-height' >Price hight</option>
-                        <option value='alpha'>Alphabetic</option>
+                        <option value='order'>{lang=='ar'?'الطلبات':'Orders'}</option>
+                        <option value='price-low'>{lang=='ar'?'السعر الأقل':'Price low'}</option>
+                        <option value='price-height' >{lang=='ar'?'السعر الأعلى':'Price hight'}</option>
+                        <option value='alpha'>{lang=='ar'?'الأبجدية':'Alphabetic'}</option>
                       </select>
                     </div>
 
                   </div>
                 </div>
                 <div className='sec-warpper'>
-                  <p className='p-results'>{productsCount || this.state.products.length} Results</p>
+                  <p className='p-results'>{productsCount || this.state.products.length} {lang=='ar'?'النتائج':'Results'}</p>
                   <div className='product-result-list'>
                     <div className='row'>
                       {
