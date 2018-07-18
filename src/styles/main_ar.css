@@ -10,9 +10,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-.row{
-    display: flex
-}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -1979,6 +1977,10 @@ html.menu-toggle{
 
 .content-innerPage{
     padding: 60px 0;
+}
+
+.content-innerPage .container > div{
+    display: flex;
 }
 
 .center-head .sec-title{

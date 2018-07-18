@@ -2,9 +2,10 @@ import React from 'react'
 
 class ProducerDesigner extends React.Component{
   render(){
+    const lang = localStorage.getItem('lang')
     return (
       <div className='contact-group-block' id='Preducer-Designer' >
-        <h2>Preducer / Designer </h2>
+        <h2>{lang==='ar'?'منتج / مصمم':'Preducer / Designer'}</h2>
         <div className='contact-list-row'>
           <div className='row is-flex'>
             <div className='col-sm-4'>
@@ -25,7 +26,7 @@ class ProducerDesigner extends React.Component{
                   <i className='icon-envelope-open icons' />
                 </div>
                 <div className='con-txt'>
-                  <h3>You are a producer , designer an interior designer </h3>
+                  <h3>{lang==='ar'?'هل انت منتج أو مصمم؟':'You are a producer , designer an interior designer'} </h3>
                   <p>designer@nazzek.com</p>
                 </div>
               </div>
@@ -66,11 +67,11 @@ class ProducerDesigner extends React.Component{
               </div>
               <div className='col-sm-3'>
                 <div className='form-group'>
-                  <label className='upload-label'>Upload Files (optional)</label>
+                  <label className='upload-label'>{lang==='ar'?'تحميل الملفات (إختياري)':'Upload Files (optional)'}</label>
                   <div className='upload-file'>
                     <div className='btn-upload'>
                       <input type='file' className='form-control' />
-                      <i className='icon-plus icons' /> Add File
+                      <i className='icon-plus icons' /> {lang==='ar'?'إضافة ملف':'Add File'}
                     </div>
                   </div>
                 </div>
@@ -78,7 +79,7 @@ class ProducerDesigner extends React.Component{
             </div>
             <div className='row'>
               <div className='col-sm-offset-4 col-sm-4'>
-                <button type='submit' className='btn btn-submit btn-block marg-t20'>Send</button>
+                <button type='submit' className='btn btn-submit btn-block marg-t20'>{lang==='ar'?'أرسل':'Send'}</button>
               </div>
             </div>
           </form>

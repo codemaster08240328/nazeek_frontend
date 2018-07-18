@@ -150,10 +150,10 @@ class Product extends Component {
                           </div>
                           <div className='pdp--list'>
                             <div className='pdp-ro'>
-                              <p className='f-rguler'>PRICE  : <span className='pr-sa'>{product.price} K.D</span></p>
+                              <p className='f-rguler'>{lang==='ar'?'سعر':'PRICE'}  : <span className='pr-sa'>{product.price} K.D</span></p>
                             </div>
                             <div className='pdp-ro'>
-                              <p className='f-rguler'>COLOR : </p>
+                              <p className='f-rguler'>{lang==='ar'?'اللون':'COLOR'} : </p>
                               <div className='color-choose'>
                                 {
                                   product.variation_set.map((item, index) => {
@@ -170,7 +170,7 @@ class Product extends Component {
                               </div>
                             </div>
                             <div className='pdp-ro'>
-                              <p className='f-rguler'>QUANTITY:</p>
+                              <p className='f-rguler'>{lang==='ar'?'الكمية':'QUANTITY'}:</p>
                               <div className='quantity'>
                                 <input type='text' name='count-quat1' className='count-quat' value={this.state.quantity} onChange={()=>{}}/>
                                 <div className='btn button-count inc jsQuantityIncrease' onClick={this.handleQuantityIncrease}><i className='fa fa-plus' aria-hidden='true' /></div>
@@ -178,16 +178,16 @@ class Product extends Component {
                               </div>
                             </div>
                             <div className='pdp-ro'>
-                              <p>Item id : #{product.id}</p>
+                              <p>{lang==='ar'?'رقم المنتج':'Item id'} : #{product.id}</p>
                             </div>
                             <div className='pdp-ro'>
-                              <p><i className='icon-check icons' />Stock Availbale</p>
+                              <p><i className='icon-check icons' />{lang==='ar'?'المنتج متوفو':'Stock Availbale'}</p>
                             </div>
                             <div className='pdp-ro'>
-                              <p>Delivery Time: 34 Hours </p>
+                              <p>{lang==='ar'?'وقت التسليم: 34 ساعة':'Delivery Time: 34 Hours '} </p>
                             </div>
                             <div className='pdp-ro'>
-                              <p className='f-rguler'>Dimensions: 234 23*3434</p>
+                              <p className='f-rguler'>{lang==='ar'?'الأبعاد: 234 23 * 3434':'Dimensions: 234 23*3434 '}</p>
                             </div>
                           </div>
                           <div className='pdp--action clearfix'>
@@ -203,7 +203,7 @@ class Product extends Component {
                   </div>
                   <div className='box-like-product'>
                     <div className='sec-head clearfix'>
-                      <h2 className='sec-title'>Similer Items</h2>
+                      <h2 className='sec-title'>{lang==='ar'?'عناصر مماثلة':'Similar Items'}</h2>
                     </div>
                     <div className='like-product-content'>
                       <LikeProduct similarProducts={product.similar_product_set}/>

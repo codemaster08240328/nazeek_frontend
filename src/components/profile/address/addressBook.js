@@ -66,7 +66,7 @@ class AddressBook extends Component {
                   </tbody>
                 </table>
               </div>
-              <a onClick={this.handleShow} className='add-newAddress'><i className='icon-plus icons' />Add New Address</a>
+              <a onClick={this.handleShow} className='add-newAddress'><i className='icon-plus icons' />{lang==='ar'?'إضافة عنوان جديد':'Add New Address'}</a>
             </div>
           </div>
         </div>

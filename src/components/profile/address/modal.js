@@ -3,6 +3,7 @@ import { Modal } from 'react-bootstrap'
 import AddressForm from '../../containers/AddressForm'
 
 const AddressModal = ({ show, handleClose }) => {
+  const lang = localStorage.getItem('lang')
   return (
     <Modal
       id='myModal-address'
@@ -11,7 +12,7 @@ const AddressModal = ({ show, handleClose }) => {
     >
       <Modal.Body>
         <div className='sec-head clearfix'>
-          <h2 className='sec-title f-left'>Add New Address</h2>
+          <h2 className='sec-title f-left'>{lang==='ar'?'إضافة عنوان جديد':'Add New Address'}</h2>
           <button onClick={handleClose} type='button' className='close' data-dismiss='modal'>&times;</button>
         </div>
         <div className='modal-body'>

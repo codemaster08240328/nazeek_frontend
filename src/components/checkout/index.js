@@ -24,27 +24,28 @@ class CheckOut extends React.Component {
   }
   render(){
     const { addresses, isFetching, cartProducts } = this.props;
+    const lang = localStorage.getItem('lang');
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
           <div className='container'>
             <ol className='breadcrumb'>
-              <li className='breadcrumb-item'><a href='index.html'><i className='icon-home icons' /></a></li>
-              <li className='breadcrumb-item active'>checkout</li>
+              <li className='breadcrumb-item'><a href=''><i className='icon-home icons' /></a></li>
+              <li className='breadcrumb-item active'>{lang==='ar'?'الدفع':'checkout'}</li>
             </ol>
           </div>
         </div>
         <div className='content-innerPage'>
           <div className='container'>
             <div className='sec-head clearfix'>
-              <h2 className='sec-title f-left'>checkout</h2>
+              <h2 className='sec-title f-left'>{lang==='ar'?'الدفع':'checkout'}</h2>
             </div>
             <div className='checkout-block'>
               <div className='table-responsive'>
                 <table className='table table-st2'>
                   <thead>
                     <tr>
-                      <th>Address List</th>
+                      <th>{lang==='ar'?'قائمة العناوين':'Address List'}</th>
                       <th />
                       <th />
                     </tr>
@@ -77,15 +78,15 @@ class CheckOut extends React.Component {
                   </tbody>
                 </table>
               </div>
-              <a href='#myModal-address' data-toggle='modal' className='add-newAddress'><i className='icon-plus icons' />Add New Address</a>
+              <a href='#myModal-address' data-toggle='modal' className='add-newAddress'><i className='icon-plus icons' />{lang==='ar'?'إضافة عنوان جديد':'Add New Address'}</a>
             </div>
             <div className='checkout-block'>
               <div className='table-responsive'>
                 <table className='table table-st2'>
                   <thead>
                     <tr>
-                      <th>Order Summery</th>
-                      <th>Total Price</th>
+                      <th>{lang==='ar'?'ملخص الطلب':'Order Summery'}</th>
+                      <th>{lang==='ar'?'السعر كامل':'Total Price'}</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -97,7 +98,7 @@ class CheckOut extends React.Component {
                             <td>
                               <div className='add-tTxt'>
                                 <h2>{item.item_title}</h2>
-                                <p>Delivery in 3 days thought delivery</p>
+                                <p>{lang==='ar'?'النوصيل خلال ثلاثة أيام':'Delivery in 3 days thought delivery'}</p>
                               </div>
                             </td>
                             <td className='td-price'>{item.line_item_total} KD</td>
@@ -109,23 +110,23 @@ class CheckOut extends React.Component {
                 </table>
               </div>
               <div className='block--discount'>
-                <div className='without-div'><i className='icon-doc icons' /><p>TOTAL (<span>without delivry fees</span>)  : {cartProducts.subtotal} KD</p></div>
-                <label className='label-disc'>30 %  Discont</label>
+                <div className='without-div'><i className='icon-doc icons' /><p>{lang==='ar'?'مجموع (بدون رسوم التوصيل(':'TOTAL (without delivry fees)'}  : {cartProducts.subtotal} KD</p></div>
+                <label className='label-disc'>{lang==='ar'?'خصم 30%':'30 %  Discount'}</label>
               </div>
               <div className='checkout-bottom clearfix'>
 
                 <div className='ch-b-left'>
-                  <a href='#' className='ge-request'>General Requset</a>
+                  <a href='#' className='ge-request'>{lang==='ar'?'طلب عام':'General Requset'}</a>
                   <ul className='ch-des'>
-                    <li>Items : {cartProducts.subtotal} K.D</li>
-                    <li>Deliver Fees : {cartProducts.tax_total} K.D</li>
-                    <li>Total Amount : {cartProducts.total} K.D</li>
+                    <li>{lang==='ar'?'معدات':'Items'} : {cartProducts.subtotal} K.D</li>
+                    <li>{lang==='ar'?'بدون رسوم التوصيل':'Deliver Fees'} : {cartProducts.tax_total} K.D</li>
+                    <li>{lang==='ar'?'المبلغ الإجمالي':'Total Amount'} : {cartProducts.total} K.D</li>
                   </ul>
                 </div>
               </div>
             </div>
             <div className='checkout-block'>
-              <h2 className='title-head2'>Payment Way</h2>
+              <h2 className='title-head2'>{lang==='ar'?'طريقة الدفع':'Payment Way'}</h2>
               <div className='payment--method clearfix'>
                 <div className='pay-mrg'>
                   <input type='radio' name='pay-method' />
@@ -145,7 +146,7 @@ class CheckOut extends React.Component {
               </div>
               <div className='checkout-bottom clearfix'>
                 <div className='ch-b-left'>
-                  <a onClick={this.handlePay} className='ge-request'>Pay now</a>
+                  <a onClick={this.handlePay} className='ge-request'>{lang==='ar'?'إدفع الآن':'Pay now'}</a>
                 </div>
               </div>
             </div>

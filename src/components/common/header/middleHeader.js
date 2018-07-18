@@ -6,7 +6,8 @@ class middleHeader extends Component{
 
   componentDidMount() {
     this.props.getItemsOfCart();
-    this.props.fetchWishlistItemCount();
+    if(localStorage.getItem('token') !== null)
+      this.props.fetchWishlistItemCount();
   };
   
 
@@ -37,7 +38,7 @@ class middleHeader extends Component{
               <div className='clearfix'>
                 <ul className='menu-purches clearfix'>
                   <li className='favorite-btn'>
-                    <Link to='/profile' onClick={()=>{localStorage.setItem('wishlist','wishlist')}}><i className='icon-heart icons' /><span>{this.props.count}</span></Link>
+                    <Link to='/profile' onClick={()=>{localStorage.setItem('wishlist','wishlist')}}><i className='icon-heart icons' /><span>{localStorage.getItem('token')!==null?this.props.count:0}</span></Link>
                   </li>
                   <li className='cart-purches-btn'>
                     <Link to='/cart'><i className='icon-basket icons' /><span>{this.props.totalCount}</span></Link>

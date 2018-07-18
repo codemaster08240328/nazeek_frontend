@@ -8,6 +8,7 @@ import {
 import { AuthUrls } from '../constant/urls'
 import history from '../utils/historyUtils'
 import {getUserProfile} from './userProfileActions'
+import { fetchWishlistItemCount } from './wishlistActions'
 
 const loginUserSuccess = (token) => {
   return {
@@ -31,7 +32,7 @@ export const loginUser = (data) => (dispatch) => {
       dispatch(loginUserSuccess(token));
       localStorage.setItem('token', token);
       dispatch(getUserProfile(token));  
-
+      dispatch(fetchWishlistItemCount())
     })
     .catch((error) => {
       dispatch(loginUserFail(error.response.data));

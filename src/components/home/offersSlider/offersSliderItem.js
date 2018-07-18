@@ -17,7 +17,7 @@ const OffersSliderItem = ({ product }) => {
               {product.description}
             </p>
           </div>
-          <div className='save-circle'><p>save<span>15: KD</span></p></div>
+          <div className='save-circle'><p>{lang==='ar'?'حفظ':'save'}<span>15: KD</span></p></div>
         </div>
         <div className='offer-bottom'>
           <Link to={`/products/${product.id}`} className='offerThumb'>

@@ -1,17 +1,18 @@
 import React from 'react'
 
 const ProductDetailsTab = ({overview, detail, review}) => {
+  const lang = localStorage.getItem('lang');
   return (
     <React.Fragment>
       <ul className='nav-tab-product clearfix'>
         <li className='active'>
-          <a href='#pro-t1' data-toggle='tab' aria-expanded='true'>overview</a>
+          <a href='#pro-t1' data-toggle='tab' aria-expanded='true'>{lang==='ar'?'نظرة عامة':'overview'}</a>
         </li>
         <li>
-          <a href='#pro-t2' data-toggle='tab' aria-expanded='false'>Details</a>
+          <a href='#pro-t2' data-toggle='tab' aria-expanded='false'>{lang==='ar'?'تفاصيل':'Details'}</a>
         </li>
         <li>
-          <a href='#pro-t3' data-toggle='tab' aria-expanded='false'>Reviews</a>
+          <a href='#pro-t3' data-toggle='tab' aria-expanded='false'>{lang==='ar'?'التعليقات':'Reviews'}</a>
         </li>
       </ul>
       <div className='tab-content'>

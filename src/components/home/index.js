@@ -7,7 +7,7 @@ import Subscribe from '../common/subscribe'
 class Home extends Component {
   componentDidMount () {
     this.props.fetchProducts()
-    this.props.filterProducts('created_date')
+    // this.props.filterProducts('created_date')
     new WOW().init()
   }
 

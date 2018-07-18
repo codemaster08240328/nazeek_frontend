@@ -51,7 +51,7 @@ class Profile extends Component {
                   <div className='bps-body'>
                     <ul>
                       <li className={view === '' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('')}>
-                        <a><span><i className='icon-grid icons' /></span>Account Home</a>
+                        <a><span><i className='icon-grid icons' /></span>{lang==='ar'?'حساب الصفحة الرئيسية':'Account Home'}</a>
                       </li>
                       <li className={view === 'presonal-info' ? 'active' : ''} onClick={() => this.handleCurrentViewChange('presonal-info')}>
                         <a ><span><i className='icon-user icons' /></span>{lang=='ar'?'المعلومات الشخصية':'Personal Information'}</a>

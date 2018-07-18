@@ -20,27 +20,27 @@ class Login extends Component {
     if (this.props.authenticated) {
       return <Redirect to='/' />
     }
-
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-              <li className='breadcrumb-item active'>Login</li>
+              <li className='breadcrumb-item active'>{lang==='ar'?'تسجيل الدخول':'Login'}</li>
             </ol>
           </div>
         </div>
         <div className='content-innerPage'>
           <div className='container'>
             <div className='sec-head center-head clearfix'>
-              <h2 className='sec-title'>Sign in</h2>
+              <h2 className='sec-title'>{lang==='ar'?'تسجيل الدخول':'Sign in'}</h2>
             </div>
             <div className='block-register'>
               <div className='row'>
                 <div className='col-md-6 col-sm-10 margin-auto'>
                   <div className='block-bySocial'>
-                    <h3>Sign up with social media</h3>
+                    <h3>{lang==='ar'?'التسجيل من خلا مواقع التواصل الإجتماعي أو الايميل':'Sign up with social media'}</h3>
                     <ul className='sign-Social clearfix'>
                       <SocialButton
                         provider='facebook'

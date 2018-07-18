@@ -9,14 +9,15 @@ class Categorie extends Component {
   }
 
   render () {
-    const { products, isFetching, error } = this.props
+    const { products, isFetching, error } = this.props;
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-              <li className='breadcrumb-item active'>All CATEGORIES</li>
+              <li className='breadcrumb-item active'>{lang==='ar'?'جميع الفئات':'All CATEGORIES'}</li>
             </ol>
           </div>
         </div>

@@ -3,6 +3,8 @@ import OwlCarousel from 'react-owl-carousel'
 import ProductDetail from './productDetail'
 import { Link } from 'react-router-dom'
 
+import {ROOT_URL} from '../../constant/urls'
+
 class Cart extends Component {
 
   render () {  

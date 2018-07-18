@@ -30,9 +30,9 @@ class BottomHeader extends Component {
                 <a href='product-page.html' data-toggle='dropdown'><i className='icon-magnifier icons' aria-hidden='true' /> {lang === 'ar'?'خيارات البحث': 'search by'}<span className='m-arrow'><i className='icon-arrow-down icons' /></span></a>
                 <ul className='dropdown-menu multi-level' role='menu' aria-labelledby='dropdownMenu'>
                   <li className='dropdown-submenu'>
-                    <a tabIndex='-1' href='product-page.html'>rooms</a>
+                    <a tabIndex='-1' href='product-page.html'>{lang==='ar'?'غرفة':'rooms'}</a>
                     <div className='dropdown-menu'>
-                      <h3>ROOMS</h3>
+                      <h3>{lang==='ar'?'غرف':'ROOMS'}</h3>
                       <ul>
                         {
                           searchByLists.rooms && 
@@ -44,9 +44,9 @@ class BottomHeader extends Component {
                     </div>
                   </li>
                   <li className='dropdown-submenu'>
-                    <a tabIndex='-1' href='product-page.html'>BRANDS</a>
+                    <a tabIndex='-1' href='product-page.html'>{lang==='ar'?'العلامات التجارية':'BRANDS'}</a>
                     <div className='dropdown-menu'>
-                      <h3>BRANDS</h3>
+                      <h3>{lang==='ar'?'العلامات التجارية':'BRANDS'}</h3>
                       <ul>
                         {
                           searchByLists.brands && 
@@ -58,9 +58,9 @@ class BottomHeader extends Component {
                     </div>
                   </li>
                   <li className='dropdown-submenu'>
-                    <a tabIndex='-1' href='product-page.html'>STYLES</a>
+                    <a tabIndex='-1' href='product-page.html'>{lang==='ar'?'الأنماط':'STYLES'}</a>
                     <div className='dropdown-menu'>
-                      <h3>STYLES</h3>
+                      <h3>{lang==='ar'?'الأنماط':'STYLES'}</h3>
                       <ul>
                         {
                           searchByLists.styles && 
@@ -72,9 +72,9 @@ class BottomHeader extends Component {
                     </div>
                   </li>
                   <li className='dropdown-submenu'>
-                    <a tabIndex='-1' href='product-page.html'>OCCASIONS</a>
+                    <a tabIndex='-1' href='product-page.html'>{lang==='ar'?'المناسبات':'OCCASIONS'}</a>
                     <div className='dropdown-menu'>
-                      <h3>OCCASIONS</h3>
+                      <h3>{lang==='ar'?'المناسبات':'OCCASIONS'}</h3>
                       <ul>
                         {
                           searchByLists.occasions && 

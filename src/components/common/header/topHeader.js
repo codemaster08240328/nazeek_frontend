@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-const TopHeader = ({ authenticated, logoutUser, user }) => {
+import { FRONT_URL } from '../../../constant/urls';
+const TopHeader = ({ authenticated, logoutUser, user, history }) => {
 
   const handleLang = ()=>{
     if(localStorage.getItem('lang') === 'ar'){
@@ -52,7 +53,7 @@ const TopHeader = ({ authenticated, logoutUser, user }) => {
 
           <li>
             
-            <a href='index.html' onClick={handleLang}><i className='icon-globe icons' />{lang=='ar'?'English':'Arabic'}</a>
+            <a href={FRONT_URL} onClick={handleLang}><i className='icon-globe icons' />{lang=='ar'?'English':'Arabic'}</a>
           </li>
           </div>
           <div className='header-username'>
