@@ -87,8 +87,7 @@ class Sliders extends Component {
                     <ReactImageMagnify {...{
                       smallImage: {
                         alt: 'Wristwatch by Ted Baker London',
-                        width: 470,
-                        height: 500,
+                        isFluidWidth: true,
                         src: `data:image/jpg;base64, ${img.image}`
                       },
                       largeImage: {
@@ -97,7 +96,8 @@ class Sliders extends Component {
                         height: 1000
                       },
                       style: {
-                        cursor: 'zoom-in'
+                        cursor: 'zoom-in',
+                        margin: 'auto',
                       },
                       isHintEnabled: true,
                       enlargedImagePosition:'over',

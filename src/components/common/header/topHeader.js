@@ -17,7 +17,11 @@ const TopHeader = ({ authenticated, logoutUser, user, history }) => {
     <div className='header-top'>
       <div className='container'>
         <ul className='topHmenu-left clearfix'>
-          <li><a href='contact.html'><i className='fa fa-envelope-o' aria-hidden='true' />mail@mail.com</a></li>
+          <li>
+            <a href='javascript:void(0);' onClick={() => window.open("mailto:"+'mail@mail.com', '_self')}>
+              <i className='fa fa-envelope-o' aria-hidden='true' />mail@mail.com
+            </a>
+          </li>
           <li><i className='fa fa-mobile' aria-hidden='true' />+965-444-444-444</li>
         </ul>        
         <ul className='topHmenu-right clearfix'>

@@ -1883,7 +1883,7 @@ html.menu-toggle{
 }
 
 .header-bottom .dropdown-menu>li.dropdown-submenu>a:before{
-    content: '\e606';
+    content: '\e605';
     position: absolute;
     top: 13px;
     left: 0;
@@ -4735,4 +4735,8 @@ a.pagination-next i,a.pagination-prev i{
 
 .block-product-slide .slick-slider{
     direction: ltr
+}
+
+.search-results .row{
+    display: flex
 }

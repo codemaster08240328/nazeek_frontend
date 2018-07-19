@@ -3546,7 +3546,7 @@ a.pagination-next i,a.pagination-prev i{
   display: flex;
   height: 540px;
 }
-.pro--Thumb > img{
+.pro--Thumb >img{
   margin: auto;
   max-height: 100%;
   max-width: 100%;

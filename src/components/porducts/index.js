@@ -94,7 +94,7 @@ class Products extends Component {
               </div>
             </div>
           }
-          <div className='container' style={{ paddingTop: pathname === '/products' ? '60px' : 0 }}>
+          <div className='container search-results' style={{ paddingTop: pathname === '/products' ? '60px' : 0 }}>
             <div className='row'>
               <div className='col-lg-3 col-md-4'>
                 <SideBar />
