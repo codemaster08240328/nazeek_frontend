@@ -4,9 +4,10 @@ import {
   FETCH_DUMMY_PAGES_SUCCESS,
   FETCH_DUMMY_PAGES_FAIL
 } from '../constant/actionsType'
+import {ROOT_URL} from '../constant/urls'
 
 export const getDummyPages = () => (dispatch) => {
-  axios.get('http://178.128.15.1/api/dummy/', {})
+  axios.get(`${ROOT_URL}api/dummy/`, {})
     .then((result) => {
       dispatch({
         type: FETCH_DUMMY_PAGES_SUCCESS,
