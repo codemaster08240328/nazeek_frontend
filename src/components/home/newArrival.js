@@ -15,7 +15,7 @@ const NewArraival = ({ products, isFetching, error, addToWishList }) => {
             <div className='offers-box'>
               <div className='sec-head clearfix'>
                 <h2 className='sec-title f-left'>{lang=='ar'?'العروض':'OFFERS'}</h2>
-                <Link to='/products' className='more-page f-right'>{lang=='ar'?'المزيد':'more'} <i className='icon-arrow-right icons' /></Link>
+                <Link to='/products' className='more-page f-right'>{lang=='ar'?'المزيد':'more'}{lang==='ar'?<i className='icon-arrow-left icons' />:<i className='icon-arrow-right icons' />}</Link>
               </div>
               <div className='sec-warpper'>
                 <OffersSlider products={products} />
@@ -25,7 +25,7 @@ const NewArraival = ({ products, isFetching, error, addToWishList }) => {
           <div className='col-lg-9 col-md-8 col-sm-7'>
             <div className='sec-head clearfix'>
               <h2 className='sec-title f-left'>{lang=='ar'?'حديثاً المضاف ':'new arrivals'}</h2>
-              <Link to='/products' className='more-page f-right'>{lang=='ar'?'المزيد':'more'} <i className='icon-arrow-right icons' /></Link>
+              <Link to='/products' className='more-page f-right'>{lang=='ar'?'المزيد':'more'} {lang==='ar'?<i className='icon-arrow-left icons' />:<i className='icon-arrow-right icons' />}</Link>
             </div>
             <div className='sec-warpper'>
               {

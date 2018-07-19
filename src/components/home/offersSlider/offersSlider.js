@@ -10,7 +10,7 @@ const OffersSlider = ({ products }) => {
       id='offers-slider'
       className='owl-carousel'
       nav
-      navText={['التالي <i class="fa fa-angle-right"/>', '<i class="fa fa-angle-left"/> السابق']}
+      navText={['التالي <i class="fa fa-angle-left"/>', '<i class="fa fa-angle-right"/> السابق']}
       items={1}
     >
       {

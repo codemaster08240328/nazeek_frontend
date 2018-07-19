@@ -26,8 +26,8 @@ const RecentProductsSlider = ({ products }) => {
 
     >
       {
-        data.map((product) => {
-          return <RecentProductsSliderItem product={product} key={product.id} />
+        data.map((product, index) => {
+          return <RecentProductsSliderItem product={product} key={index} />
         })
       }
     </OwlCarousel>

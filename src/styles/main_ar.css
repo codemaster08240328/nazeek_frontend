@@ -209,10 +209,6 @@ input, textarea, a, button{
     padding: 20px 0;
 }
 
-.header-middle .row{
-    display: flex
-}
-
 .logo-site{
     display: inline-block;
 }
@@ -1055,11 +1051,6 @@ li.offers-m > a > span{
     padding-right: 60px;
 }
 
-.padd-l-r .owl-stage{
-    left: 105%
-}
-
-
 .f-left{
     float: right;
 }
@@ -1085,10 +1076,6 @@ li.offers-m > a > span{
 
 .section-new-arrivals{
     padding: 50px 0;
-}
-
-.section-new-arrivals .row{
-    display: flex
 }
 
 .product-item{
@@ -1551,9 +1538,6 @@ ul li:hover >.submenu{
     position: relative;
 }
 
-.section-home-slider .owl-stage-outer .owl-stage{
-    left: 400%
-}
 
 .scroll-button{
     position: absolute;
@@ -1979,9 +1963,7 @@ html.menu-toggle{
     padding: 60px 0;
 }
 
-.content-innerPage .container > div{
-    display: flex;
-}
+
 
 .center-head .sec-title{
     display: table;
@@ -4682,7 +4664,7 @@ a.pagination-next i,a.pagination-prev i{
 .Thumb-main{
     position: absolute;
     top: 50%;
-    right: -50%;
+    left: 50%;
     transform: translate(-50% , -50%);
 }
 
@@ -4695,7 +4677,7 @@ a.pagination-next i,a.pagination-prev i{
 
 .product-item:hover .Thumb-main{
     transform: translate(0 , -50%);
-    right: -100%;
+    right: -150%;
 }
 
 .product-item:hover .Thumb-hover{
@@ -4706,7 +4688,7 @@ a.pagination-next i,a.pagination-prev i{
 
 .recent-item:hover .Thumb-main{
     transform: translate(0 , -50%);
-    right: -100%;
+    right: -150%;
 }
 
 .recent-item:hover .Thumb-hover{
@@ -4739,3 +4721,18 @@ a.pagination-next i,a.pagination-prev i{
     display: flex;
 }
 
+.owl-carousel .owl-stage-outer {
+    direction: ltr;
+}
+
+.owl-carousel .owl-item{
+    direction: rtl
+}
+
+.product-detail-primary .row{
+    display: flex;
+}
+
+.block-product-slide .slick-slider{
+    direction: ltr
+}
