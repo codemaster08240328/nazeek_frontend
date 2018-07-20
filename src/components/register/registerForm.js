@@ -6,11 +6,13 @@ import renderErrors from '../../utils/renderErrors'
 import renderField from '../../utils/renderField'
 
 const RegisterForm = ({ handleSubmit, errors, valid }) => {
+  const lang = localStorage.getItem('lang')
   return (
+    
     <form className='form-st1' onSubmit={handleSubmit}>
       {renderErrors(errors)}
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Username</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'الإسم':'Username'}</label>
         <div className='col-sm-7'>
           <div className='control--group input-tooltip'>
             <Field type='text' component={renderField} name='username' />
@@ -20,7 +22,7 @@ const RegisterForm = ({ handleSubmit, errors, valid }) => {
         </div>
       </div>
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Full Name</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'الإسم الكامل':'Full Name'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field type='text' component='input' name='full_name' className='form-control' />
@@ -29,7 +31,7 @@ const RegisterForm = ({ handleSubmit, errors, valid }) => {
         </div>
       </div>
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Password</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'كلمة المرور':'Password'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field type='password' component={renderField} name='password1' />
@@ -38,7 +40,7 @@ const RegisterForm = ({ handleSubmit, errors, valid }) => {
         </div>
       </div>
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Confirm Password</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'تأكيد كلمة المرور':'Confirm Password'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field type='password' component={renderField} name='password2' />
@@ -47,7 +49,7 @@ const RegisterForm = ({ handleSubmit, errors, valid }) => {
         </div>
       </div>
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Email</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'الإيميل':'Email'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field type='email' component={renderField} name='email' />
@@ -56,7 +58,7 @@ const RegisterForm = ({ handleSubmit, errors, valid }) => {
         </div>
       </div>
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Moible (Optional)</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'رقم الهاتف (إختياري)':'Moible (Optional)'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field type='text' component='input' name='mobile' className='form-control' />
@@ -68,19 +70,19 @@ const RegisterForm = ({ handleSubmit, errors, valid }) => {
         <div className='col-sm-offset-4 col-sm-7'>
           <div className='ui_checkbox'>
             <Field type='checkbox' component={renderField} name='terms_conditions' />
-            <label>I Accept of term of use & policy</label>
+            <label>{lang==='ar'?'انا اوافق على شروط الاستخدام والخصوصية':'I Accept of term of use & policy'}</label>
           </div>
           <div className='ui_checkbox'>
             <Field type='checkbox' component='input' name='subscribe' />
-            <label>Subscribe to newslater</label>
+            <label>{lang==='ar'?'تابعنا من خلال البريد الإلكتروني':'Subscribe to newslater'}</label>
           </div>
         </div>
       </div>
       <div className='not-robot'>
         <img src='images/a1.jpg' alt='' className='img-responsive' />
       </div>
-      <button type='submit' className='btn btn-submit' disabled={!valid}>Sign Up</button>
-      <p className='aready-p'>Already have an account? <Link to='/login'>login</Link></p>
+      <button type='submit' className='btn btn-submit' disabled={!valid}>{lang==='ar'?'التسجيل':'Sign Up'}</button>
+      <p className='aready-p'>{lang==='ar'?'لديك حساب معنا؟':'Already have an account?'} <Link to='/login'>{lang==='ar'?'تسجيل الجخول':'login'}</Link></p>
     </form>
   )
 }

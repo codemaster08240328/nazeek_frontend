@@ -7,26 +7,27 @@ class Register extends Component {
     
   }
   render () {
+    lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-              <li className='breadcrumb-item active'>Register</li>
+              <li className='breadcrumb-item active'>{lang==='ar'?'سجل':'Register'}</li>
             </ol>
           </div>
         </div>
         <div className='content-innerPage'>
           <div className='container'>
             <div className='sec-head center-head clearfix'>
-              <h2 className='sec-title'>Register</h2>
+              <h2 className='sec-title'>{lang==='ar'?'سجل':'Register'}</h2>
             </div>
             <div className='block-register'>
               <div className='row'>
                 <div className='col-md-6 col-sm-10 margin-auto'>
                   <div className='block-bySocial'>
-                    <h3>Sign up with social media</h3>
+                    <h3>{lang==='ar'?'سجل من خلال التواصل':'Sign up with social media'}</h3>
                     <ul className='sign-Social clearfix'>
                       <li className='s-facebook'>
                         <a href='#'><i className='fa fa-facebook' aria-hidden='true' />Facebook</a>
@@ -39,7 +40,7 @@ class Register extends Component {
                       </li>
                     </ul>
                   </div>
-                  <div className='signOr'><span>OR</span></div>
+                  <div className='signOr'><span>{lang==='ar'?'أو':'OR'}</span></div>
                   <div className='block-form'>
                     <RegisterForm />
                   </div>
