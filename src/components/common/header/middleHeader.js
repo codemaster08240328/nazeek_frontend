@@ -19,6 +19,7 @@ class middleHeader extends Component{
   }
 
   render () {
+    const lang = localStorage.getItem('lang')
     return (
       <div className='header-middle'>
         <div className='container'>
@@ -30,7 +31,7 @@ class middleHeader extends Component{
             </div>
             <div className='col-md-6 col-sm-6'>
               <form className='form-search-head' onSubmit={this.handleSubmit}>
-                <input name='search' type='text' className='form-control' placeholder='Search' />
+                <input name='search' type='text' className='form-control' placeholder={lang==='ar'?'البحث':'search'} />
                 <button className='btn btn-submit-search'><i className='icon-magnifier icons' aria-hidden='true' /></button>
               </form>
             </div>

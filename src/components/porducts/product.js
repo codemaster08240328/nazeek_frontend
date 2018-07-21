@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 
 
 const Product = ({ product }) => {
+  const lang = localStorage.getItem('lang')
   return (
     <div className='col-lg-4 col-md-6 col-sm-6 col-xs-6'>
       <div className='product-result-item'>
@@ -27,7 +28,7 @@ const Product = ({ product }) => {
           <div className='pro-resTxt'>
             <h2 className='pr-title'><a href='#'>{product.title}</a></h2>
             <p className='pr-shop'>{product.seller_name}</p>
-            <span className='pr-sa'>{product.price} DK</span>
+            <span className='pr-sa'>{product.price} {lang==='ar'?'د.ك':'KD'}</span>
             <ul className='pro-resAction'>
               <li>
                 <a href='#' className='heart-btn'><i className='icon-heart icons' /></a>

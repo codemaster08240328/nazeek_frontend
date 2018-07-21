@@ -11,11 +11,11 @@ const RecentProduct = ({product}) => {
       </Link>
       <div className='recTxt'>
         <p className='re-salary'>
-          <span className='sa-new'>{product.price} KD</span>
-          <span className='sa-old'>{product.price} KD</span>
+          <span className='sa-new'>{product.price} {lang==='ar'?'د.ك':'KD'}</span>
+          <span className='sa-old'>{product.price} {lang==='ar'?'د.ك':'KD'}</span>
         </p>
         <p className='desc-p'>
-          {product.description}
+          {lang==='ar'?'لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.':product.description}
         </p>
         <div className='star-rating'>
           <span style={{ width: '60%' }}><strong className='rating'>3</strong> out of 5</span>

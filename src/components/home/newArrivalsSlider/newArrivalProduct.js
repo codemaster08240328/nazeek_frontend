@@ -10,8 +10,8 @@ const NewArrivalProduct = ({ product, addToWishList }) => {
         <img src={`data:image/jpg;base64, ${product.image}`} alt='' className='img-responsive Thumb-hover' />
       </Link>
       <div className='proTxt'>
-        <p className='re-salary'><span className='sa-new'>{product.price} KD</span></p>
-        <p className='desc-p'>{product.description}</p>
+        <p className='re-salary'><span className='sa-new'>{product.price} {lang==='ar'?'د.ك':'KD'}</span></p>
+        <p className='desc-p'>{lang==='ar'?'لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.':product.description}</p>
         <a href='#' className='addCart'>{lang=='ar'?'أضف الى السلة':'Add To Cart'}</a>
       </div>
       <a onClick={() => addToWishList(product)} className='favorite-pro-btn'><i className='icon-heart icons' /></a>

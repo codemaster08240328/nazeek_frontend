@@ -101,7 +101,7 @@ class CheckOut extends React.Component {
                                 <p>{lang==='ar'?'النوصيل خلال ثلاثة أيام':'Delivery in 3 days thought delivery'}</p>
                               </div>
                             </td>
-                            <td className='td-price'>{item.line_item_total} KD</td>
+                            <td className='td-price'>{item.line_item_total} {lang==='ar'?'د.ك':'KD'}</td>
                           </tr>
                         )
                       })
@@ -110,7 +110,7 @@ class CheckOut extends React.Component {
                 </table>
               </div>
               <div className='block--discount'>
-                <div className='without-div'><i className='icon-doc icons' /><p>{lang==='ar'?'مجموع (بدون رسوم التوصيل(':'TOTAL (without delivry fees)'}  : {cartProducts.subtotal} KD</p></div>
+                <div className='without-div'><i className='icon-doc icons' /><p>{lang==='ar'?'مجموع (بدون رسوم التوصيل(':'TOTAL (without delivry fees)'}  : {cartProducts.subtotal} {lang==='ar'?'د.ك':'KD'}</p></div>
                 <label className='label-disc'>{lang==='ar'?'خصم 30%':'30 %  Discount'}</label>
               </div>
               <div className='checkout-bottom clearfix'>

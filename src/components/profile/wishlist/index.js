@@ -8,6 +8,7 @@ class Wishlist extends Component {
   }
 
   render () {
+    const lang = localStorage.getItem('lang')
     const { wishlistItems } = this.props
 
     return (
@@ -23,7 +24,7 @@ class Wishlist extends Component {
                   <th className='th-product'>Product</th>
                   <th>Shop Name</th>
                   <th>Item ID</th>
-                  <th>Price(KD)</th>
+                  <th>Price({lang==='ar'?'د.ك':'KD'})</th>
                 </tr>
               </thead>
               <tbody>

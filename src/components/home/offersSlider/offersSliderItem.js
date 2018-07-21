@@ -10,14 +10,14 @@ const OffersSliderItem = ({ product }) => {
         <div className='offer-top clearfix'>
           <div className='offer-desc'>
             <p className='re-salary'>
-              <span className='sa-new'>{product.price} KD</span>
-              <span className='sa-old'>{product.price} KD</span>
+              <span className='sa-new'>{product.price} {lang==='ar'?'د.ك':'KD'}</span>
+              <span className='sa-old'>{product.price} {lang==='ar'?'د.ك':'KD'}</span>
             </p>
             <p className='desc-p'>
-              {product.description}
+              {lang==='ar'?'لوريم إيبسوم هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر.':product.description}
             </p>
           </div>
-          <div className='save-circle'><p>{lang==='ar'?'حفظ':'save'}<span>15: KD</span></p></div>
+          <div className='save-circle'><p>{lang==='ar'?'حفظ':'save'}<span>15: {lang==='ar'?'د.ك':'KD'}</span></p></div>
         </div>
         <div className='offer-bottom'>
           <Link to={`/products/${product.id}`} className='offerThumb'>

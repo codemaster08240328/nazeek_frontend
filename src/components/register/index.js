@@ -7,7 +7,7 @@ class Register extends Component {
     
   }
   render () {
-    lang = localStorage.getItem('lang')
+    const lang = localStorage.getItem('lang')
     return (
       <React.Fragment>
         <div className='breadcrumb-bar'>

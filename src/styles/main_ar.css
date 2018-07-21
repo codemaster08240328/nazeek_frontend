@@ -457,7 +457,7 @@ li.offers-m > a > span{
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
-    margin-right: 2px;
+    margin-right: 10px;
 }
 
 .menu-st > li > a:hover > span.m-arrow, .menu-st > li > a:focus > span.m-arrow{
@@ -1950,7 +1950,7 @@ html.menu-toggle{
 }
 
 .breadcrumb>li+li:before{
-    content: '\e606';
+    content: '\e605';
     font-family: 'simple-line-icons';
     font-size: 14px;
 }
@@ -3976,6 +3976,8 @@ a.pagination-next i,a.pagination-prev i{
     font-size: 16px;
     text-align: center;
     border-radius: 50%;
+    cursor: pointer;
+
 }
 
 .share-pro > li.sh-instgram > a{
@@ -4737,6 +4739,15 @@ a.pagination-next i,a.pagination-prev i{
     direction: ltr
 }
 
-.search-results .row{
+.search-results >.row{
     display: flex
+}
+
+.icon-home{
+    margin-left: 10px;
+}
+
+.totalShare li{
+    display: inline-block;
+    margin-right: 15px
 }

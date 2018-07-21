@@ -18,10 +18,10 @@ class OrderHistory extends React.Component {
             <div className='order-hRow'>
               <div className='ooh-head'>
                 <ul className='order-hHead clearfix'>
-                  <li>order date: <span>9/11/2017</span></li>
-                  <li>Order#:<span>2017</span></li>
-                  <li>Order price(KD):<span>9017</span></li>
-                  <li>status:<span>Delivered on  1/1/2017</span></li>
+                  <li>{lang=='ar'?'تاريخ الطلب':'order date'}: <span>9/11/2017</span></li>
+                  <li>{lang=='ar'?'الطلب':'order'}#:<span>2017</span></li>
+                  <li>{lang=='ar'?'سعر الطلب (د.ك)':'Order price(KD)'}:<span>9017</span></li>
+                  <li>{lang=='ar'?'الحالة':'status'}:<span>{lang=='ar'?'التسليم في 1/1/2017':'Delivered on  1/1/2017'}</span></li>
                 </ul>
               </div>
               <div className='ooh-body'>
@@ -29,10 +29,10 @@ class OrderHistory extends React.Component {
                   <table className='table table-st1'>
                     <thead>
                       <tr>
-                        <th className='th-product'>Product</th>
-                        <th>Item ID</th>
-                        <th>Item price</th>
-                        <th>Quantity</th>
+                        <th className='th-product'>{lang=='ar'?'المنتج':'Product'}</th>
+                        <th>{lang=='ar'?'رقم المنتج':'Item ID'}</th>
+                        <th>{lang=='ar'?'سعر المنتج (د.ك)':'Item price'}</th>
+                        <th>{lang=='ar'?'الكمية':'Quantity'}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -43,8 +43,8 @@ class OrderHistory extends React.Component {
                               <img src='images/ku.png' alt='' className='img-responsive' />
                             </a>
                             <div className='tp-desc'>
-                              <h2><a href='#'>Lorem ipsum dolor sit amet,</a></h2>
-                              <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <h2><a href='#'>{lang=='ar'?'عنوان العينة':'Sample Title'}</a></h2>
+                              <p>{lang=='ar'?'عينة توضيحية':'Sample Description'}</p>
                             </div>
                           </div>
                         </td>
@@ -55,16 +55,16 @@ class OrderHistory extends React.Component {
                     </tbody>
                   </table>
                 </div>
-                <div className='delivery-note'><span>Delivery address:</span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                <div className='delivery-note'><span>{lang=='ar'?'عنوان التسليم':'Delivery address'}:{lang=='ar'?'عنوان العينة':'Sample Address'}</span></div>
               </div>
             </div>
             <div className='order-hRow'>
               <div className='ooh-head'>
                 <ul className='order-hHead clearfix'>
-                  <li>order date: <span>9/11/2017</span></li>
-                  <li>Order#:<span>2017</span></li>
-                  <li>Order price(KD):<span>9017</span></li>
-                  <li>status:<span>Delivered on  1/1/2017</span></li>
+                  <li>{lang=='ar'?'تاريخ الطلب':'order date'}: <span>9/11/2017</span></li>
+                  <li>{lang=='ar'?'الطلب':'order'}#:<span>2017</span></li>
+                  <li>{lang=='ar'?'سعر الطلب (د.ك)':'Order price(KD)'}:<span>9017</span></li>
+                  <li>{lang=='ar'?'الحالة':'status'}:<span>{lang=='ar'?'التسليم في 1/1/2017':'Delivered on  1/1/2017'}</span></li>
                 </ul>
               </div>
               <div className='ooh-body'>
@@ -72,10 +72,10 @@ class OrderHistory extends React.Component {
                   <table className='table table-st1'>
                     <thead>
                       <tr>
-                        <th className='th-product'>Product</th>
-                        <th>Item ID</th>
-                        <th>Item price</th>
-                        <th>Quantity</th>
+                        <th className='th-product'>{lang=='ar'?'المنتج':'Product'}</th>
+                        <th>{lang=='ar'?'رقم المنتج':'Item ID'}</th>
+                        <th>{lang=='ar'?'سعر المنتج (د.ك)':'Item price'}</th>
+                        <th>{lang=='ar'?'الكمية':'Quantity'}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -86,8 +86,8 @@ class OrderHistory extends React.Component {
                               <img src='images/ku.png' alt='' className='img-responsive' />
                             </a>
                             <div className='tp-desc'>
-                              <h2><a href='#'>Lorem ipsum dolor sit amet,</a></h2>
-                              <p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                              <h2><a href='#'>{lang=='ar'?'عنوان العينة':'Sample Title'}</a></h2>
+                              <p>{lang=='ar'?'عينة توضيحية':'Sample Description'}</p>
                             </div>
                           </div>
                         </td>
@@ -98,7 +98,7 @@ class OrderHistory extends React.Component {
                     </tbody>
                   </table>
                 </div>
-                <div className='delivery-note'><span>Delivery address:</span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit,</div>
+                <div className='delivery-note'><span>{lang=='ar'?'عنوان التسليم':'Delivery address'}:{lang=='ar'?'عنوان العينة':'Sample Address'}</span></div>
               </div>
             </div>
           </div>

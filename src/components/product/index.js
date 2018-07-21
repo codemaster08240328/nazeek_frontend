@@ -4,6 +4,7 @@ import LikeProduct from './likeProductsSlider'
 import ProductDetailsTab from './productDetailsTab'
 import Sliders from './sliders'
 import VideoModal from './youtubeModal'
+import ShareModal from './ShareModal'
 import {
   EmailShareButton,
   EmailIcon,
@@ -20,10 +21,13 @@ class Product extends Component {
     this.state = {
       quantity: 1,
       isYoutubeModal: false,
-      variationSetId: 0
+      variationSetId: 0,
+      show: false
     }
     this.toggleYoutubeModal = this.toggleYoutubeModal.bind(this);
     this.selectVariationId = this.selectVariationId.bind(this)
+    this.handleShow = this.handleShow.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
 
   toggleYoutubeModal(){
@@ -65,6 +69,14 @@ class Product extends Component {
     this.props.getItemsOfCart(varId, count)
   }
 
+  handleClose () {
+    this.setState({ show: false })
+  }
+
+  handleShow () {
+    this.setState({ show: true })
+  }
+
   render () {
     const { isFetching, product, error } = this.props
 
@@ -79,7 +91,7 @@ class Product extends Component {
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-              <li className='breadcrumb-item'><a href='product-page.html'>{product.category_name}</a></li>
+              <li className='breadcrumb-item'><a href='product-page.html'>{product.category_name}  </a></li>
               <li className='breadcrumb-item active'>{product.title}</li>
             </ol>
           </div>
@@ -99,7 +111,7 @@ class Product extends Component {
                           <Sliders imgs={product.productimage_set} />
                           <div className='bottom-slide-pro clearfix'>
                             <ul className='share-pro clearfix'>
-                              <li className='sh-share'><i className='icon-share icons' /></li>
+                              <li className='sh-share' onClick={this.handleShow}><i className='icon-share icons' /></li>
                               <li className='sh-instgram'>
                                 <GooglePlusShareButton
                                   url={shareUrl}
@@ -211,7 +223,8 @@ class Product extends Component {
                   </div>
                 </div>
                 <VideoModal isModal={this.state.isYoutubeModal} toggleModal={this.toggleYoutubeModal}/>
-                <Alert message='Success' visible={this.props.wishlistSuccess || this.props.cartSuccess}/>
+                <ShareModal show={this.state.show} handleClose={this.handleClose}/>
+                <Alert message={lang=='ar'?'تم بنجاح':'Success'} visible={this.props.wishlistSuccess || this.props.cartSuccess}/>
               </div>
         }
       </React.Fragment>

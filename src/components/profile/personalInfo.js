@@ -57,7 +57,7 @@ class PersonalInfo extends React.Component{
             <div className='col-lg-7 col-md-11 col-sm-12'>
               <form className='form-st1' onSubmit={this.handleSubmit}>
                 <div className='form-group row'>
-                  <label className='col-sm-3 control-label'>Full Name</label>
+                  <label className='col-sm-3 control-label'>{lang==='ar'?'الإسم الكامل':'Full Name'}</label>
                   <div className='col-sm-9'>
                     <div className='control--group input-edit'>
                       <input type='text' className='form-control' name='name' value={this.state.name} onChange={this.handleChangeValue} disabled={this.state.nameFlag} required/>
@@ -67,7 +67,7 @@ class PersonalInfo extends React.Component{
                   </div>
                 </div>
                 <div className='form-group row'>
-                  <label className='col-sm-3 control-label'>Password</label>
+                  <label className='col-sm-3 control-label'>{lang==='ar'?'كلمة المرور':'Password'}</label>
                   <div className='col-sm-9'>
                     <div className='control--group input-edit'>
                       <input type='password' className='form-control' name='pass' value={this.state.pass} onChange={this.handleChangeValue} disabled={this.state.passFlag} required/>
@@ -77,7 +77,7 @@ class PersonalInfo extends React.Component{
                   </div>
                 </div>
                 <div className='form-group row'>
-                  <label className='col-sm-3 control-label'>Email</label>
+                  <label className='col-sm-3 control-label'>{lang==='ar'?'البريد':'Email'}</label>
                   <div className='col-sm-9'>
                     <div className='control--group input-edit'>
                       <input type='email' className='form-control' name='email' value={this.state.email} onChange={this.handleChangeValue} disabled={this.state.emailFlag} required/>
@@ -87,7 +87,7 @@ class PersonalInfo extends React.Component{
                   </div>
                 </div>
                 <div className='form-group row'>
-                  <label className='col-sm-3 control-label'>Mobile</label>
+                  <label className='col-sm-3 control-label'>{lang==='ar'?'التليفون المحمول':'Mobile'}</label>
                   <div className='col-sm-9'>
                     <div className='control--group input-edit'>
                       <input type='text' className='form-control' name='mobile' value={this.state.mobile} onChange={this.handleChangeValue} disabled={this.state.mobileFlag} />
@@ -103,7 +103,7 @@ class PersonalInfo extends React.Component{
             </div>
           </div>
         </div>
-        <Alert message="Your personal infomations are updated successfully" visible={this.props.success}/>
+        <Alert message={lang==='ar'?'تم تحديث معلوماتك الشخصية بنجاح':"Your personal infomations are updated successfully"} visible={this.props.success}/>
       </div>
 
     )

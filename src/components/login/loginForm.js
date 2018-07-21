@@ -12,7 +12,7 @@ const LoginForm = (props) => {
     <form className='form-st1' onSubmit={handleSubmit}>
       {renderErrors(errors)}
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>{lang==='ar'?'البريد الإلكتروني':'Email'}</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'البريد':'Email'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field name='email' component={renderField} type='text' />

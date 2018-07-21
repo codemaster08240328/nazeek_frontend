@@ -5,7 +5,7 @@ import {
   FETCH_CATEGORIE_FAIL
 } from '../constant/actionsType'
 import { ShopUrls } from '../constant/urls'
-import { fetchProductsSuccess } from './fetchProductsActions'
+import { fetchProductsSuccess, fetchProductsStart } from './fetchProductsActions'
 
 const fetchCategotieStart = () => {
   return {
@@ -29,7 +29,7 @@ const fetchCategotieFail = (err) => {
 
 export const fetchCategotie = (id) => (dispatch) => {
   dispatch(fetchCategotieStart())
-
+  dispatch(fetchProductsStart())
   axios.get(ShopUrls.CATEGORIES + '/' + id, {})
     .then((result) => {
       if (result.status >= 400) {

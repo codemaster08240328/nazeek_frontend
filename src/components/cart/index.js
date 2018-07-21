@@ -60,7 +60,7 @@ class Cart extends Component {
                 <p className='cc-note'>{lang=='ar'?'من خلال الاستمرار في الخروج ، فإنك توافق على شروط الاستخدام وسياسة الخصوصية':'By countinu to checkout you accept of term of use and privecy policy'} </p>
               </div>
               <div className='ch-b-right'>
-                <div className='without-div'><i className='icon-doc icons' /><p>{lang=='ar'?'(مجموع (بدون رسوم التوصيل':'TOTAL (without delivry fees)'} : {this.props.cartProducts.subtotal} KD</p></div>
+                <div className='without-div'><i className='icon-doc icons' /><p>{lang=='ar'?'(مجموع (بدون رسوم التوصيل':'TOTAL (without delivry fees)'} : {this.props.cartProducts.subtotal} {lang==='ar'?'د.ك':'KD'}</p></div>
                 <div className='cart-action clearfix'>
                   <a href='index.html' className='btn-primary-cus'>{lang=='ar'?'تابع التسوق':'Continue Shopping'} <i className='glyphicon glyphicon-share-alt' /></a>
                   <Link to='/checkout' className='btn-primary-cus primary-cus-active'>{lang=='ar'?'الدفع':'Checkout'}</Link>

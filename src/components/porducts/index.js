@@ -24,7 +24,7 @@ class Products extends Component {
   setSort = (ev) => {
     const val = ev.target.value
     const products = this.state.products
-    let newProducts
+    let newProducts;
 
     switch (val) {
       case 'order':
@@ -38,10 +38,8 @@ class Products extends Component {
         // })
         break
       case 'price-low':
-        newProducts = products.sort((a, b) => {
-          if (a.price < b.price) return 1
-          if (a.price > b.price) return -1
-          return 0
+        newProducts = products.sort(function(a, b){
+          return a.price - b.price
         })
         this.setState({
           products: newProducts
@@ -49,20 +47,26 @@ class Products extends Component {
         break
 
       case 'price-height':
-        newProducts = products.sort((a, b) => {
-          if (a.price < b.price) return -1
-          if (a.price > b.price) return 1
-          return 0
+        newProducts = products.sort(function(a, b){
+          return b.price - a.price
         })
         this.setState({
           products: newProducts
         })
         break
       case 'alpha':
-        newProducts = products.sort((a, b) => {
-          if (a.title < b.title) return -1
-          if (a.title > b.title) return 1
-          return 0
+        newProducts = products.sort(function(a, b){
+          var nameA = a.title.toUpperCase(); // ignore upper and lowercase
+          var nameB = b.title.toUpperCase(); // ignore upper and lowercase
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+        
+          // names must be equal
+          return 0;
         })
         this.setState({
           products: newProducts
@@ -106,7 +110,7 @@ class Products extends Component {
                     <div className='filter-sortrg'>
                       <i className='zmdi zmdi-unfold-more' />
                       <select className='form-control sort-s' onChange={this.setSort}>
-                        <option value='order'>{lang=='ar'?'الطلبات':'Orders'}</option>
+                        {/* <option value='order'>{lang=='ar'?'الطلبات':'Orders'}</option> */}
                         <option value='price-low'>{lang=='ar'?'السعر الأقل':'Price low'}</option>
                         <option value='price-height' >{lang=='ar'?'السعر الأعلى':'Price hight'}</option>
                         <option value='alpha'>{lang=='ar'?'الأبجدية':'Alphabetic'}</option>

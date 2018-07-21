@@ -15,8 +15,7 @@ class ProducerDesigner extends React.Component{
                 </div>
                 <div className='con-txt'>
                   <p>+965-333-333-333</p>
-                  <p>(available Sunday to Thusday </p>
-                  <p>From 9 :00 AM to 5 : 00 PM Kuwait Loacl Time ) (GMT +3)</p>
+                  <p>{lang==='ar'?'(متوفر من الاحد الي الخميس من الساعة 9:00 صباحا حتي الساعة 5:00 مساء بتوقيت الكويت) (بتوقيت جرينتش +3)':'(available Sunday to Thursday From 9: 00 AM to 5: 00 PM Kuwait Local Time ) (GMT +3)'}</p>
                 </div>
               </div>
             </div>
@@ -40,27 +39,27 @@ class ProducerDesigner extends React.Component{
                 <div className='row'>
                   <div className='col-sm-4'>
                     <div className='form-group'>
-                      <input type='text' className='form-control' placeholder='Name' />
+                      <input type='text' className='form-control' placeholder={lang==='ar'?'اسم':'Name'} />
                     </div>
                   </div>
                   <div className='col-sm-4'>
                     <div className='form-group'>
-                      <input type='email' className='form-control' placeholder='Email' />
+                      <input type='email' className='form-control' placeholder={lang==='ar'?'بريد':'Email'} />
                     </div>
                   </div>
                   <div className='col-sm-4'>
                     <div className='form-group'>
-                      <input type='text' className='form-control' placeholder='Mobile (optional)' />
+                      <input type='text' className='form-control' placeholder={lang==='ar'?'الجوال (اختياري)':'Mobile (optional)'} />
                     </div>
                   </div>
                   <div className='col-sm-12'>
                     <div className='form-group'>
-                      <input type='text' className='form-control' placeholder='Subject' />
+                      <input type='text' className='form-control' placeholder={lang==='ar'?'موضوع':'Subject'} />
                     </div>
                   </div>
                   <div className='col-sm-12'>
                     <div className='form-group'>
-                      <textarea className='form-control' placeholder='Comment' />
+                      <textarea className='form-control' placeholder={lang==='ar'?'تعليق':'Comment'} />
                     </div>
                   </div>
                 </div>

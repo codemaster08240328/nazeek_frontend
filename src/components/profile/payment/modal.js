@@ -2,6 +2,7 @@ import React from 'react'
 import { Modal } from 'react-bootstrap'
 
 const PaymentModal = ({ show, handleClose }) => {
+  const lang = localStorage.getItem('lang')
   return (
     <Modal
       id='myModal-address'
@@ -10,7 +11,7 @@ const PaymentModal = ({ show, handleClose }) => {
     >
       <Modal.Body>
         <div className='sec-head clearfix'>
-          <h2 className='sec-title f-left'>Add New Method</h2>
+          <h2 className='sec-title f-left'>{lang=='ar'?'إضافة طريقة جديدة':'Add New Method'}</h2>
           <button onClick={handleClose} type='button' className='close' data-dismiss='modal'>&times;</button>
         </div>
         <div className='modal-body'>

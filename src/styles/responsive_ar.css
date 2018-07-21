@@ -226,7 +226,15 @@
     .section-new-arrivals .row{
         display: flex
     }
+
+    .form-st1 .form-group {
+        display: flex;
+    }
     
+    .form-st1 .form-check > div{
+        float: right;
+        margin-right: 33.33%;
+    }
 
 }
 

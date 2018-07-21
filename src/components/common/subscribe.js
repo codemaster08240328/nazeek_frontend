@@ -43,7 +43,7 @@ class Subscribe extends React.Component {
             </div>
           </div>
         </div>
-        <Alert message='Success' visible={this.props.success}/>
+        <Alert message={lang=='ar'?'شكرًا لإشتراكك معنا':'Thank you for your subscription'} visible={this.props.success}/>
       </section>
     )
   }

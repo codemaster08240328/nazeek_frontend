@@ -411,7 +411,7 @@ li.offers-m > a > span{
   display: inline-block;
   vertical-align: middle;
   font-size: 12px;
-  margin-left: 2px;
+  margin-left: 10px;
 }
 .menu-st > li > a:hover > span.m-arrow, .menu-st > li > a:focus > span.m-arrow{
   color: #706f6f;
@@ -3666,6 +3666,7 @@ a.pagination-next i,a.pagination-prev i{
   font-size: 16px;
   text-align: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 .share-pro > li.sh-instgram > a{
   background-color: #720e9e;
@@ -4281,4 +4282,13 @@ a.pagination-next i,a.pagination-prev i{
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+}
+
+.icon-home{
+  margin-right: 5px;
+}
+
+.totalShare li{
+  display: inline-block;
+  margin-right: 15px
 }
