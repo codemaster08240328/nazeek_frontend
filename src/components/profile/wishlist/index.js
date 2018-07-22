@@ -14,17 +14,17 @@ class Wishlist extends Component {
     return (
       <div className='col-lg-9 col-md-8 col-sm-7'>
         <div className='sec-head clearfix'>
-          <h2 className='sec-title f-left'>Wishlist</h2>
+          <h2 className='sec-title f-left'>{lang==='ar'?'قائمة المفضلات':'Wishlist'}</h2>
         </div>
         <div className='sec-warpper'>
           <div className='table-responsive'>
             <table className='table table-st1 wishlist-table table-cart table-striped'>
               <thead>
                 <tr>
-                  <th className='th-product'>Product</th>
-                  <th>Shop Name</th>
-                  <th>Item ID</th>
-                  <th>Price({lang==='ar'?'د.ك':'KD'})</th>
+                  <th className='th-product'>{lang==='ar'?'المنتج':'Product'}</th>
+                  <th>{lang==='ar'?'اسم المحل':'Shop Name'}</th>
+                  <th>{lang==='ar'?'معرف العنصر':'Item ID'}</th>
+                  <th>{lang==='ar'?'السعر':'Price'}({lang==='ar'?'د.ك':'KD'})</th>
                 </tr>
               </thead>
               <tbody>

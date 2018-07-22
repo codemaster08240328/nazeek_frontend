@@ -34,7 +34,7 @@ const createAddressSuccess = (address) => {
   }
 }
 
-export const creatCheckOut = () => () => {
+export const creatCheckOut = () => {
   const body = new FormData();
   body.append('token', localStorage.getItem('token'));
   const config = {
@@ -80,14 +80,24 @@ export const getAdresses = () => (dispatch) => {
   // dispatch(getAddressStart());
   const checkout = creatCheckOut();
   if (localStorage.getItem('checkout_token') === null){
-    checkout().then(()=>{
-      axios.get(CartUrls.getAdress + '?checkout_token=' + localStorage.getItem('checkout_token'))
-      .then((res) => {
-        dispatch(getAddressSuccess(res.data))
-      }).catch((err) => {        
-        getAddressFail(err)
+    const body = new FormData();
+    body.append('token', localStorage.getItem('token'));
+    const config = {
+      url: CartUrls.getCheckOut,
+      method: 'post',
+      data: body
+    };
+    axios.request(config)
+      .then((result) => {
+        localStorage.setItem('checkout_token', result.data.user_checkout_token);
+        axios.get(CartUrls.getAdress + '?checkout_token=' + result.data.user_checkout_token)
+        .then((res) => {
+          dispatch(getAddressSuccess(res.data))
+        }).catch((err) => {        
+          getAddressFail(err)
+        })
       })
-    })
+      
   } else {
     axios.get(CartUrls.getAdress+'?checkout_token='+localStorage.getItem('checkout_token'))
     .then((res) => {

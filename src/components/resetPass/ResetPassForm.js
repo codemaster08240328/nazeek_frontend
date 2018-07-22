@@ -6,12 +6,13 @@ import renderErrors from '../../utils/renderErrors'
 import renderField from '../../utils/renderField'
 
 const ResetPassForm = (props) => {
-  const { handleSubmit, errors, valid } = props
+  const { handleSubmit, errors, valid } = props;
+  const lang = localStorage.getItem('lang')
   return (
     <form className='form-st1' onSubmit={handleSubmit}>
       {renderErrors(errors)}
       <div className='form-group row'>
-        <label className='col-sm-4 control-label'>Email</label>
+        <label className='col-sm-4 control-label'>{lang==='ar'?'بريد':'Email'}</label>
         <div className='col-sm-7'>
           <div className='control--group'>
             <Field name='email' component={renderField} type='text' />
@@ -19,8 +20,8 @@ const ResetPassForm = (props) => {
           </div>
         </div>
       </div>
-      <button type='submit' className='btn btn-submit' disabled={!valid}>Submit</button>
-      <p className='aready-p'>don't have an account? <Link to='/register'>create account</Link></p>
+      <button type='submit' className='btn btn-submit' disabled={!valid}>{lang==='ar'?'إرسال':'Submit'}</button>
+      <p className='aready-p'>{lang==='ar'?'ليس لديك حساب؟':"don't have an account? "}<Link to='/register'>{lang==='ar'?'إصنع حساب':'create account'}</Link></p>
     </form>
   )
 }

@@ -97,7 +97,7 @@ class PersonalInfo extends React.Component{
                   </div>
                 </div>
                 <div >
-                  <input type='submit' className={this.state.saveBtnClass} value='Save' disabled={this.state.SaveFlag}/>
+                  <input type='submit' className={this.state.saveBtnClass} value={lang==='ar'?'حفظ':'Save'} disabled={this.state.SaveFlag}/>
                 </div>
               </form>
             </div>

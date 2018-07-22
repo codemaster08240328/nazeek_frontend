@@ -55,7 +55,9 @@ export const socialLoginUser = (data, socailType) => (dispatch) => {
 }
 
 export const logoutUser = () => (dispatch) => {
-  localStorage.clear()
+  const lang = localStorage.getItem('lang');
+  localStorage.clear();
+  localStorage.setItem('lang',lang);
   dispatch({
     type: LOGOUT_USER
   })

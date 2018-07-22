@@ -8,6 +8,7 @@ class resetPass extends Component {
     if (this.props.authenticated) {
       return <Redirect to='/' />
     }
+    const lang = localStorage.getItem('lang')
 
     return (
       <React.Fragment>
@@ -15,14 +16,14 @@ class resetPass extends Component {
           <div className='container'>
             <ol className='breadcrumb'>
               <li className='breadcrumb-item'><Link to='/'><i className='icon-home icons' /></Link></li>
-              <li className='breadcrumb-item active'>FORGOT PASSWORD</li>
+              <li className='breadcrumb-item active'>{lang==='ar'?'نسيت كلمة المرور':'FORGOT PASSWORD'}</li>
             </ol>
           </div>
         </div>
         <div className='content-innerPage'>
           <div className='container'>
             <div className='sec-head center-head clearfix'>
-              <h2 className='sec-title'>FORGOT PASSWORD</h2>
+              <h2 className='sec-title'>{lang==='ar'?'نسيت كلمة المرور':'FORGOT PASSWORD'}</h2>
             </div>
             <div className='block-register'>
               <div className='row'>

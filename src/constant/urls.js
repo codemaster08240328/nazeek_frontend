@@ -1,5 +1,6 @@
-// const ROOT_URL = 'http://209.97.132.19:8000/'// 18.197.50.198
-// const ROOT_URL = 'http://206.189.177.94:8000/'// live server...
+// export const ROOT_URL = 'http://178.128.5.21:8000/'
+// export const FRONT_URL = 'http://178.128.5.21:3000/index.html'
+
 export const ROOT_URL = 'http://192.168.0.101:8080/'
 export const FRONT_URL = 'http://localhost:3000/index.html'
 export const AuthUrls = {

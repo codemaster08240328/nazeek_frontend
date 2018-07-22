@@ -1,7 +1,7 @@
 import React from 'react'
 
 const WishlistProduct = ({ product, deleteWishlistItem, getItemsOfCart }) => {
-
+  const lang = localStorage.getItem('lang')
   return (
     <tr>
       <td>
@@ -16,7 +16,7 @@ const WishlistProduct = ({ product, deleteWishlistItem, getItemsOfCart }) => {
             <div className='star-rating'>
               <span style={{ width: '60%' }}><strong className='rating'>3</strong> out of 5</span>
             </div>
-            <span className='pr-sa'>{product.variation_set[0].price} DK</span>
+            <span className='pr-sa'>{product.variation_set[0].price} {lang==='ar'?'د.ك':'KD'}</span>
           </div>
         </div>
       </td>

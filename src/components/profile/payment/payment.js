@@ -70,7 +70,7 @@ class Payment extends Component {
                   </tbody>
                 </table>
               </div>
-              <a onClick={this.handleShow} className='add-newAddress'><i className='icon-plus icons' />Add New Method</a>
+              <a onClick={this.handleShow} className='add-newAddress'><i className='icon-plus icons' />{lang==='ar'?'إضافة طريقة جديدة':'Add New Method'}</a>
             </div>
           </div>
         </div>
